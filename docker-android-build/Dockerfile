@@ -12,7 +12,7 @@ RUN apt-get install -y awscli
 RUN apt-get install -y expect
 
 ## Add git
-RUN apt-get install git
+RUN apt-get install -y git
 
 ###################
 # JDK8
