@@ -7,9 +7,12 @@ ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 \
     PATH="$PATH:/usr/lib/jvm/java-8-openjdk-amd64/bin:/opt/android-sdk/tools:/opt/android-sdk/tools/bin:/opt/android-sdk/platform-tools"
 
 RUN apt-get update -qq
-RUN apt-get install -y --no-install-recommends wget lib32stdc++6 libqt5widgets5 lib32z1 unzip git
+RUN apt-get install -y --no-install-recommends wget lib32stdc++6 libqt5widgets5 lib32z1 unzip
 RUN apt-get install -y awscli
 RUN apt-get install -y expect
+
+## Add git
+RUN apt-get install git
 
 ###################
 # JDK8
